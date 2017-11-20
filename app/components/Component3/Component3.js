@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {AppRegistry, Text, View, StyleSheet, TextInput} from 'react-native';
+import {AppRegistry, Text, View, StyleSheet, TextInput, Switch} from 'react-native';
 
 export default class Component3 extends Component {
 
@@ -7,12 +7,19 @@ export default class Component3 extends Component {
         super(props);
         this.state = {
             textValue: 'Hello',
+            switchValue: false,
         }
     }
 
     onChangeText(value) {
         this.setState({
             textValue: value,
+        });
+    }
+
+    onSwitchChange(value) {
+        this.setState({
+            switchValue: value,
         });
     }
 
@@ -26,6 +33,10 @@ export default class Component3 extends Component {
                     onChangeText={(value) => this.onChangeText(value)}
                 />
                 <Text>{this.state.textValue}</Text>
+                <Switch
+                    value={this.state.switchValue}
+                    onValueChange={(value) => this.onSwitchChange(value)}
+                />
             </View>
         );
     }

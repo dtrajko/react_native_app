@@ -4,15 +4,13 @@ import Component1 from './app/components/Component1/Component1';
 import Component2 from './app/components/Component2/Component2';
 import Component3 from './app/components/Component3/Component3';
 import Component4 from './app/components/Component4/Component4';
+import Component5 from './app/components/Component5/Component5';
 
 export default class react_native_app extends Component {
     render() {
         return(
             <View>
-                <Component1 message="This is Component 1 message from App.js" />
-                <Component2 />
-                <Component3 />
-                <Component4 />
+                <Component5 />
             </View>
         );
     }
